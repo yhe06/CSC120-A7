@@ -83,7 +83,7 @@ public boolean isResident(Student s);
 _Hint: use the functions provided by the [`ArrayList`](https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html) class to make this much easier! Specifically, check out `add(...)`, `remove(...)`, and `contains(...)`._
 
 ## Phase 2: the `Library` class
-A `Library` is an altogether different kind of building:
+A `Library` is an altoge–ther different kind of building:
 
 <img src="https://cdn-icons-png.flaticon.com/512/1596/1596485.png" alt="Library icon created by Freepik - Flaticon" width="200"/>
 
@@ -112,7 +112,7 @@ public void returnBook(String title);
 ```
 _Hint: use the functions provided by the [`Hashtable`](https://docs.oracle.com/javase/8/docs/api/java/util/Hashtable.html) class to make this much easier! Specifically, check out `put(...)`, `remove(...)`, and `replace(...)`._
 
-In this specific implementation, a Library can only have _one_ copy of a title. 
+!! In this specific implementation, a Library can only have _one_ copy of a title. 
 
 ---
 4. For good measure, we'll also write a couple of methods to support browsing the collection:
