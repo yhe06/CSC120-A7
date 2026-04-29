@@ -14,10 +14,18 @@ public class Student {
         this.classes = new ArrayList<>(); 
     }
 
+    /**
+     * returns name of student.
+     * @return student name.
+     */
     public String getName() {
         return this.name; 
     }
 
+    /**
+     * Returns name, student id, and class year in a sentence.
+     * @return sentence
+     */
     public String toString() {
         return this.name + " ID: " + this.id + " Class Year: " + this.classYear;
     }

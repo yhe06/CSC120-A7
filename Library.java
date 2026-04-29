@@ -59,6 +59,7 @@ public class Library extends Building implements LibraryRequirements{
 
   /**
    * Replaces the value of the key wanted to true.
+   * @param title
    * 
    */
   public void returnBook(String title){
@@ -71,31 +72,23 @@ public class Library extends Building implements LibraryRequirements{
 
   /** 
    * Returns a boolean depending on whether or not the collection Hashtable contains key.
-   * 
+   * @param title
+   * @return true or false depending on if library contains title.
    */
   public boolean containsTitle(String title){
-    if (this.collection.containsKey(title)) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.collection.containsKey(title);
   }
 
   /** 
    * Returns a boolean depending on whether a title is available to check out.
-   * 
+   * @param title
+   * @return true or false depending on if title is available.
    */
   public boolean isAvailable(String title){
-    if (this.collection.containsValue(true)){
-      return true;
-    } else {
-      return false;
-    }
+    return this.collection.get(title).equals(true);
+
   }
   
-  // NEED TO FIGURE THIS OUT...
-  // For each method... had to look at online examples
-
   /**
    * Prints out the title of all the titles in the library and its availability.
    */
@@ -117,17 +110,9 @@ public class Library extends Building implements LibraryRequirements{
 
     neilson.addTitle("The Price of Salt");
     neilson.addTitle("The Lilac People");
-    neilson.checkOut("The Price of Salt");
-    neilson.isAvailable("The Price of Salt");
-    System.out.println(neilson.isAvailable("The Price of Salt"));
-    neilson.returnBook("The Price of Salt");
-    System.out.println(neilson.isAvailable("The Price of Salt"));
-    System.out.println(neilson.containsTitle("The Price of Salt"));
-    System.out.println(neilson.collection);
-    System.out.println(neilson.collection);
 
     neilson.checkOut("The Price of Salt");
-    neilson.printCollection();
+    System.out.println(neilson.isAvailable("The Price of Salt"));
 
     
 

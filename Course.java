@@ -11,18 +11,32 @@ public class Course {
         this.meetingTime = meetingTime; 
     }
 
+    /**
+     * returns name of Course
+     * @return course name
+     */
     public String getName() {
         return this.name;
     }
 
+    /**
+     * returns course subject number.
+     * @return course subject number.
+     */
     public String getSubjectNumber() {
         return this.subjectNumber;
     }
 
+    /**
+     * returns course meeting time.
+     * @return meetingTime.
+     */
     public String getMeetingTime() {
         return this.meetingTime;
     }
-
+    /**
+     * Returns subject num, course name, and meeting time in a sentence when building is called.
+     */
     public String toString() {
         return this.subjectNumber + ": " + this.name + " " + this.meetingTime; 
     }

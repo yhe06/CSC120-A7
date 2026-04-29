@@ -20,7 +20,7 @@ public class Cafe extends Building implements CafeRequirements {
     // Methods
 
     /**
-     * Reduces cafe's stock depending on what they sell
+     * Reduces cafe's stock depending on what they sell, or restock if the shop doesn't have enough inventory.
      * 
      * @param size
      * @param nSugarPackets
@@ -33,7 +33,8 @@ public class Cafe extends Building implements CafeRequirements {
             this.nCreams -= nCreams;
             this.nCups -= 1;
         } else {
-            throw new RuntimeException("Cafe does not in stock to sell this coffee.");
+            this.restock(nCoffeeOunces, nSugarPackets, nCreams, nCups);
+            System.out.println("You needed a restock.");
         }
     }
 
@@ -56,6 +57,7 @@ public class Cafe extends Building implements CafeRequirements {
     public static void main(String[] args) {
         Cafe compass = new Cafe("Compass Cafe", "100 Elm St", 1, 5,5,5,5);
         System.out.println(compass.getAddress());
+
     }
     
 }
